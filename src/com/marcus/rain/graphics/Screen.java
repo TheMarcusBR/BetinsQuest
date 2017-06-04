@@ -2,7 +2,6 @@ package com.marcus.rain.graphics;
 
 import java.util.Random;
 
-import com.marcus.rain.entity.mob.Player;
 import com.marcus.rain.level.tile.Tile;
 
 public class Screen {

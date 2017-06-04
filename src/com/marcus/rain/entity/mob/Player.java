@@ -46,40 +46,71 @@ public class Player extends Mob {
 		if (dir == 0) {
 			sprite = Sprite.player_forward;
 			if (walking){
-				if (anim % 20 > 10){
+				if (anim % 40 > 30){
 					sprite = Sprite.player_forward_1;
 				} else {
-					sprite = Sprite.player_forward_2;
+					if (anim % 40 > 20){ 
+						sprite = Sprite.player_forward_2;
+					} else {
+						if (anim % 40 > 10 ){
+							sprite = Sprite.player_forward_3;
+						} else {
+								sprite = Sprite.player_forward;				
+							}
+					}
 				}
 			}
 		}
 		if (dir == 1) {
 			sprite = Sprite.player_side;
 			if (walking){
-				if (anim % 20 > 10){
+				if (anim % 40 > 30){
 					sprite = Sprite.player_side_1;
 				} else {
-					sprite = Sprite.player_side_2;
+					if (anim % 40 > 20){ 
+						sprite = Sprite.player_side_2;
+					} else {
+						if (anim % 40 > 10 ){
+							sprite = Sprite.player_side_4;
+						} else {
+								sprite = Sprite.player_side;				
+							}
+					}
 				}
 			}
 		}
 		if (dir == 2) {
 			sprite = Sprite.player_back;
 			if (walking){
-				if (anim % 20 > 10){
-					sprite = Sprite.player_back_1;
-				} else {
+				if (anim % 40 > 30){
 					sprite = Sprite.player_back_2;
+				} else {
+					if (anim % 40 > 20){ 
+						sprite = Sprite.player_back_4;
+					} else {
+						if (anim % 40 > 10 ){
+							sprite = Sprite.player_back_3;
+						} else {
+								sprite = Sprite.player_back;				
+							}
+					}
 				}
 			}
 		}
 		if (dir == 3) {
-			sprite = Sprite.player_side;
 			if (walking){
-				if (anim % 20 > 10){
+				if (anim % 40 > 30){
 					sprite = Sprite.player_side_1;
 				} else {
-					sprite = Sprite.player_side_2;
+					if (anim % 40 > 20){ 
+						sprite = Sprite.player_side_2;
+					} else {
+						if (anim % 40 > 10 ){
+							sprite = Sprite.player_side_4;
+						} else {
+								sprite = Sprite.player_side;				
+							}
+					}
 				}
 			}
 			flip = 1;

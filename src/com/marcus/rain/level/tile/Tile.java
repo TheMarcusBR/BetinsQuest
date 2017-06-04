@@ -9,6 +9,9 @@ public class Tile {
 	public Sprite sprite;
 	
 	public static Tile grass = new GrassTile(Sprite.grass);
+	public static Tile flowerbush = new FlowerbushTile(Sprite.flowerbush);
+	public static Tile cuttree = new CuttreeTile(Sprite.cuttree);
+	public static Tile rocks = new RocksTile(Sprite.rocks);
 	public static Tile voidTile = new VoidTile(Sprite.voidSprite);
 
 	public Tile(Sprite sprite) {
