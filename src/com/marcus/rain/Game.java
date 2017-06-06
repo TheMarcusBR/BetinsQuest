@@ -15,14 +15,15 @@ import com.marcus.rain.entity.mob.Player;
 import com.marcus.rain.graphics.Screen;
 import com.marcus.rain.input.Keyboard;
 import com.marcus.rain.level.Level;
-import com.marcus.rain.level.RandomLevel;
+import com.marcus.rain.level.SpawnLevel;
+import com.marcus.rain.level.TileCoordinate;
 
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 	public static int width = 300;
 	public static int height = width / 16 * 9;
 	public static int scale = 3;
-	public static String title = "Rain";
+	public static String title = "Betin's Quest 2";
 
 	private Thread thread;
 	private JFrame frame;
@@ -43,9 +44,10 @@ public class Game extends Canvas implements Runnable {
 		screen = new Screen(width, height);		
 		frame = new JFrame();		
 		key = new Keyboard();
-		level = new RandomLevel(64, 64);
-		player = new Player(key);
-		
+		level = new SpawnLevel("/levels/level.png");
+		TileCoordinate playerSpawn = new TileCoordinate(8, 6);
+		player = new Player(playerSpawn.x() + 16 / 2, playerSpawn.y(), key);
+		player.init(level);
 		frame.addKeyListener(key);
 		
 	}
